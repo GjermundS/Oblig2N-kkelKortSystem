@@ -2,6 +2,7 @@ package nøkkelKortSystem;
 import java.util.*;
 
 public class Ansatt extends Kort implements Konstanter {
+	
 	java.util.GregorianCalendar ansettelsesDato;
 	double timelønn;
 
@@ -63,8 +64,7 @@ public class Ansatt extends Kort implements Konstanter {
 
 	@Override
 	public void settFulltNavn(String name) {
-		setNavn(name);
-		
+		setNavn(name);		
 	}
 
 	@Override
@@ -82,6 +82,7 @@ public class Ansatt extends Kort implements Konstanter {
 	public double beregnBonus() {
 		return (årAnsatt()*15);
 	}
+	
 	public int årAnsatt() {
 		java.util.GregorianCalendar dagensDato = new java.util.GregorianCalendar();
 		int[] ansatt = {this.ansettelsesDato.YEAR,this.ansettelsesDato.MONTH,this.ansettelsesDato.DATE};
