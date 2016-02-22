@@ -19,6 +19,9 @@ public abstract class Kort {
 	public String getNavn(){
 		return navn;
 	}
+	public void setNavn(String navn){
+		this.navn=navn;
+	}
 	public boolean isSperret(){
 		return this.aksesskode;
 	}
