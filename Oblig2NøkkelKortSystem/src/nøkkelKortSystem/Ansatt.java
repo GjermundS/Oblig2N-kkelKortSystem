@@ -3,12 +3,12 @@ import java.util.*;
 
 public class Ansatt extends Kort implements Konstanter {
 	
-	java.util.GregorianCalendar ansettelsesDato;
-	double timelønn;
+	private GregorianCalendar ansettelsesDato;
+	private double timelønn;
 
-	public Ansatt(String navn, int pin, int timelønn) {
+	public Ansatt(String navn, int pin, double timelønn) {
 		super(navn, pin);
-		ansettelsesDato = new java.util.GregorianCalendar();
+		ansettelsesDato = new GregorianCalendar();
 		this.timelønn = timelønn;
 	}
 
@@ -97,5 +97,18 @@ public class Ansatt extends Kort implements Konstanter {
 				return år-1;
 		}
 		return 0;
+	}
+	
+	@Override
+	public Ansatt clone(){
+		Ansatt clone = new Ansatt(this.getNavn(), this.getPin(), this.timelønn);
+		clone.setAksesskode(this.getAksesskode());
+		clone.ansettelsesDato.setTime(this.ansettelsesDato.getTime());
+		return clone;
+	}
+	
+	@Override
+	public int compareTo(Kort a){
+		return super.compareTo(a);
 	}
 }

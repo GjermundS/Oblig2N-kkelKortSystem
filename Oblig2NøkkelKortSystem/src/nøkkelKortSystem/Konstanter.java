@@ -2,12 +2,12 @@ package nøkkelKortSystem;
 
 public interface Konstanter {
 	
-	public void settFornavn(String name);
-	public String hentFornavn();
-	public void settEtternavn(String name);
-	public String hentEtternavn();
-	public void settFulltNavn(String name);
-	public String hentFulltNavn();
-	public double beregnKreditt();
-	public double beregnBonus();
+	public abstract void settFornavn(String name);
+	public abstract String hentFornavn();
+	public abstract void settEtternavn(String name);
+	public abstract String hentEtternavn();
+	public abstract void settFulltNavn(String name);
+	public abstract String hentFulltNavn();
+	public abstract double beregnKreditt();
+	public abstract double beregnBonus();
 }

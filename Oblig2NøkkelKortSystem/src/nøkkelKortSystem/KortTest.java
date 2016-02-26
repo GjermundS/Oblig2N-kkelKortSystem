@@ -18,5 +18,23 @@ public class KortTest {
         }
         Ansatt a1 = new Ansatt("en to", 1234, 450);
         System.out.println(a1.beregnBonus() + " " + a1.beregnKreditt());
+        
+        Kort k3 = new Ansatt("Per Persen", 1234, 400);
+        Kort k4 = new Gjest("Pette Dass");
+        Kort k5 = new Ansatt("Jane Jannesen", 1234, 400);
+        Kort k6 = new Gjest("Fnavn Enavn");
+        Kort k7 = k5.clone();
+        reg.add(k3);
+        reg.add(k4);
+        reg.add(k5);
+        reg.add(k6);
+        reg.add(k7);
+        for(int i=0; i<reg.size(); i++)
+        	System.out.println(reg.get(i));
+        System.out.println("\nSORTER");
+        reg.sort(null);
+        for(int i=0; i<reg.size(); i++){
+        	System.out.println(reg.get(i));
+        }
     }
 }

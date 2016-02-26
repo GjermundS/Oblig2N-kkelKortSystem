@@ -27,4 +27,22 @@ public class Gjest extends Kort {
 		else
 			return false;
 	}
+	
+	public GregorianCalendar getUtGår() {
+		return utGår;
+	}
+	public void setUtGår(GregorianCalendar utGår) {
+		this.utGår = utGår;
+	}
+	
+	@Override
+	public Gjest clone(){
+		Gjest clone = new Gjest(this.getNavn());
+		clone.utGår.setTime(this.utGår.getTime());
+		return clone;
+	}
+	@Override
+	public int compareTo(Kort a){
+		return super.compareTo(a);
+	}
 }
